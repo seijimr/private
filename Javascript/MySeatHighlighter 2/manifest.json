@@ -1,0 +1,24 @@
+﻿{
+  "name": "MySeatHighlighter2",
+  "version": "3.0.32",
+  "manifest_version": 2,
+  "description": "自分の座席をハイライトします",
+"icons": {
+    "16": "favicon.png",
+    "48": "favicon.png",
+    "128": "favicon.png"
+},
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://docs.google.com/spreadsheets/u/0/d/12_N_A0iCnuDjPmqU0ZXrjY5L7WQbkU7_v7jGsRk5emk/htmlembed/sheet?headers=false&gid=0"],
+      "js": ["jquery-2.1.4.min.js","replace.js"]
+    }
+  ],
+  "browser_action" : {
+    "default_popup" : "popup.html"
+  },
+  "options_page": "options.html"
+}
